@@ -1,0 +1,7 @@
+* {
+  overflow: hidden;
+}
+p {
+  margin: 0;
+  white-space: nowrap;
+}
