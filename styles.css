@@ -1,5 +1,9 @@
 * {
-  overflow: hidden;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 p {
   margin: 0;

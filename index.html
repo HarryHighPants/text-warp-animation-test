@@ -1,8 +1,27 @@
 <link rel="stylesheet" type="text/css" href="./styles.css" />
 <head>
-  <title>Spiral text animation</title>
+  <title style="display: none">Spiral text animation</title>
 </head>
 <body>
-  <div id="text_container" />
+  <div style="height: 100%">
+    <div
+      id="text_container"
+      style="
+        flex: 2;
+        background-color: #2b2031;
+        color: beige;
+        padding: 10;
+        overflow: hidden;
+      "
+    >
+      /imagine
+    </div>
+    <div
+      id="debug_container"
+      style="flex: 1; background-color: rgb(255, 255, 255); padding: 10"
+    >
+      debugger
+    </div>
+  </div>
 </body>
 <script type="module" src="./index.js"></script>
