@@ -13,6 +13,7 @@ const sentences = [
   "/imagine A wizard is never late, nor is he early, he arrives precisely when he means to.",
   "/imagine The world is changed, I feel it in the water, I feel it in the earth, I smell it in the air.",
   "/imagine Home is behind, the world ahead, and there are many paths to tread.",
+  "/imagine Go ahead, make my day.",
   "/imagine It is not the strength of the body that counts, but the strength of the spirit.",
   "/imagine I will not say, do not weep, for not all tears are an evil.",
   "/imagine It is useless to meet revenge with revenge: it will heal nothing.",
