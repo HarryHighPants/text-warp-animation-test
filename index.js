@@ -20,9 +20,10 @@ const getUpdatedLines = (time) => {
     const rowsFromEdge = Math.min(row, rowCount - row)
     const rowsFromCenter = Math.abs(row - rowCount / 2)
     const rowSinFromEdge =
-      Math.sin(1 + time / 100 + rowsFromEdge / 3) * 0.55 + 0.7
+      Math.sin(1 + time / 100 + rowsFromCenter / 3) * 0.55 + 0.7
+    const sin = (1 + Math.sin(-1.5 + time / 100)) * 10
     for (let col = 0; col < colCount; col++) {
-      outputLines[row] += getCharacter(row, col * rowSinFromEdge) ?? " "
+      outputLines[row] += getCharacter(row, sin + col * rowSinFromEdge) ?? " "
     }
   }
   return outputLines.map((l) => l.replace(/ /g, "&nbsp;"))
