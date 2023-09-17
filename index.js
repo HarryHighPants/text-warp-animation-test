@@ -2,8 +2,8 @@ import sentences from "./sentences.js"
 const longestSentenceLength = Math.max(...sentences.map((s) => s.length))
 
 const textContainer = document.getElementById("text_container")
-const PixelsPerCharacter = 7.8
-const PixelsPerLine = 15
+const PixelsPerCharacter = 9.5
+const PixelsPerLine = PixelsPerCharacter * 1.9
 let width, height, colCount, rowCount
 function onDisplaySizeUpdated() {
   width = textContainer.offsetWidth
@@ -20,7 +20,7 @@ const getUpdatedLines = (time) => {
     const rowsFromEdge = Math.min(row, rowCount - row)
     const rowsFromCenter = Math.abs(row - rowCount / 2)
     const rowSinFromEdge =
-      Math.sin(1 + time / 100 + rowsFromEdge / 10) * 0.55 + 0.7
+      Math.sin(1 + time / 100 + rowsFromEdge / 3) * 0.55 + 0.7
     for (let col = 0; col < colCount; col++) {
       outputLines[row] += getCharacter(row, col * rowSinFromEdge) ?? " "
     }
