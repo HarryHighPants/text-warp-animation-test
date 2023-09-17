@@ -20,8 +20,8 @@ const getUpdatedLines = (time) => {
     const rowsFromEdge = Math.min(row, rowCount - row)
     const rowsFromCenter = Math.abs(row - rowCount / 2)
     const rowSinFromEdge =
-      Math.sin(1 + time / 100 + rowsFromCenter / 3) * 0.55 + 0.7
-    const sin = (1 + Math.sin(-1.5 + time / 100)) * 10
+      Math.sin(1.5 + time / 50 + rowsFromCenter / 10) * 0.5 + 0.5
+    const sin = (1 + Math.sin(-1.5 + time / 50)) * 40
     for (let col = 0; col < colCount; col++) {
       outputLines[row] += getCharacter(row, sin + col * rowSinFromEdge) ?? " "
     }
@@ -54,7 +54,7 @@ const mainLoop = async () => {
     const lines = getUpdatedLines(time)
     renderLines(lines)
     // Wait for next frame at 4ps
-    await new Promise((resolve) => setTimeout(resolve, 1000 / 60))
+    await new Promise((resolve) => setTimeout(resolve, 1000 / 10))
   }
 }
 
